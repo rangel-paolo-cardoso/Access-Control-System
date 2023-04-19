@@ -58,15 +58,15 @@ This cycle repeats until option 2 is chosen, indicating that the user wants to e
 
 After implementing the menu part, you must implement the final part, which is the report. As mentioned earlier, the report is a fundamental part of the system because it provides information for the establishment owner to develop strategies to increase their clientele and, consequently, increase their profit, generating more jobs and impacting the lives of many people. Can you see the importance of a well-developed system?
 
-The report should be printed to the console when option 2 is selected. Assuming that 200 people visited the establishment, the report should contain the following information:
+The report should be printed to the console when option 2 is selected. Assuming that 6 people visited the establishment, the report should contain the following information:
 
-- Total number of people who visited the establishment: in this case, this value should be 200.
+- Total number of people who visited the establishment: in this case, this value should be 6.
 
-- Number of people under 18 who visited the establishment: assuming that out of the 200 people, 20 were under 18 years old, then this value should be 20 in the report.
+- Number of people under 18 who visited the establishment: assuming that out of the 6 people, 2 were under 18 years old, then this value should be 20 in the report.
 
-- Number of adult people (between 18 and 49 years old) who visited the establishment: assuming that out of the 200 people, 150 were adults between 18 and 49 years old, then this value should be 150.
+- Number of adult people (between 18 and 49 years old) who visited the establishment: assuming that out of the 6 people, 2 were adults between 18 and 49 years old, then this value should be 2.
 
-- Number of people 50 years old or older who visited the establishment: assuming that out of the 200 people, 30 were 50 years old or older, then this value should be 30.
+- Number of people 50 years old or older who visited the establishment: assuming that out of the 6 people, 30 were 50 years old or older, then this value should be 2.
 
 
 The report should also calculate the percentage of people in each category relative to the total number of people. Still following the previous assumption, the total number of visits to the establishment was 6 people, so the report in the percentage section should show:
