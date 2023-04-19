@@ -1,117 +1,101 @@
 # Access-Control-System
 
-# Requisitos do desafio
+## Challenge Requirements
 
-# Descrição do desafio: Sistema de Controle de Acesso
+## Challenge Description: Access Control System
 
-Que sucesso! 👏 Chegou até você uma demanda para desenvolver um sistema de controle de acesso inteligente para um estabelecimento. Ficou combinado com o cliente que o sistema, ao ser finalizado, deve apresentar um relatório que divida as pessoas que acessaram o estabelecimento em três categorias:
+Congratulations! 👏 You have received a demand to develop an intelligent access control system for a facility. It has been agreed with the client that the system, when completed, must present a report that divides the people who accessed the facility into three categories:
 
-1. Pessoas menores de 18 anos,
-2. Pessoas adultas (entre 18 e 49 anos), e
-3. Pessoas a partir de 50 anos.
+People under 18 years old,
+Adults (between 18 and 49 years old), and
+People 50 years old and over.
 
-Com esse relatório, o cliente poderá tomar decisões baseadas em informações para alcançar ou fidelizar sua clientela. Esse sistema deve apresentar um menu, no console, indicando a opção de acessar o estabelecimento e a opção de finalizar o sistema e mostrar um relatório. O fluxo do sistema é definido seguindo duas etapas principais que devem ser executadas na seguinte ordem:
+With this report, the client can make decisions based on information to reach or retain its clientele. This system should present a menu, in the console, indicating the option to access the facility and the option to finish the system and show a report. The system flow is defined following two main steps that must be executed in the following order:
 
-1. **Inserir idade de pessoa cliente no sistema:** essa etapa se repete até que a opção de finalizar o sistema seja escolhida. A idade das pessoas clientes deve ser armazenada em um array de tamanho dinâmico, já que não sabemos quantas pessoas clientes chegarão ao estabelecimento. Dica: utilize a classe `ArrayList` do Java para a criação e manipulação de arrays de tamanho dinâmico. Para mais informações você pode consultar o site da [W3Schools](https://www.w3schools.com/java/java_arraylist.asp) ou [JavaPoint](https://www.javatpoint.com/java-arraylist), ou então verificar a documentação da Oracle.
+1. **Insert the age of the client into the system:** this step is repeated until the option to finish the system is chosen. The age of the client people must be stored in a dynamically sized array, as we do not know how many client people will arrive at the facility. Tip: use the ArrayList class from Java for the creation and manipulation of dynamically sized arrays. For more information, you can consult the website of W3Schools or JavaPoint, or check the Oracle documentation.
 
-2. **Finalizar o sistema e mostrar o relatório:** nessa etapa, o laço de repetição deve ser terminado e então o relatório deve ser impresso no console. O relatório deve conter o total de pessoas que acessaram o estabelecimento, e também o número de pessoas menores de 18 anos, o número de pessoas adultas (entre 18 e 49 anos) e o número de pessoas a partir de 50 anos que acessaram o estabelecimento. O relatório também deve calcular, em relação ao total de pessoas, a porcentagem delas que eram menores de 18, que eram adultas (entre 18 e 49), e as a partir de 50.
+2. **Finish the system and show the report:** in this step, the loop must be terminated, and then the report must be printed on the console. The report should contain the total number of people who accessed the facility, as well as the number of people under 18, the number of adults (between 18 and 49), and the number of people 50 and over who accessed the facility. The report should also calculate, in relation to the total number of people, the percentage of people who were under 18, who were adults (between 18 and 49), and those who were 50 and over.
 
-A imagem abaixo mostra o fluxo que o programa deve seguir:
+The image below shows the flow that the program should follow:
 
 ![SistemaFluxograma](img/controle-acesso.png)
 
-Esse sistema deve ter a classe `Principal`, contendo nela o método `main`. No método `main`, é preciso ter uma instância da classe `Scanner` para poder ler as entradas da pessoa usuária pelo console e um laço de repetição que representam menu da aplicação. Dessa forma podemos registrar a entrada de todas as pessoas que chegarem durante o expediente.
+This system should have the Principal class containing the main method. In the main method, an instance of the Scanner class is required to read user inputs through the console, and a loop that represents the application menu. This way we can register the entry of all people who arrive during the workday.
 
-- O menu deve ter o formato:
+The menu should have the format:
 
     ```
-    Entre com o número correspondente à opção desejada:
-    1 - Acessar o estabelecimento
-    2 - Finalizar sistema e mostrar relatório
+    Enter the number corresponding to the desired option:
+    1 - Access the establishment
+    2 - Finish the system and show the report
+
     ```
-Se a pessoa usuária entrar com o valor 1 (que indica que ela quer acessar o estabelecimento), então a mensagem `Entre com a idade:` será impressa no console. Em seguida, depois de inserir a idade da pessoa cliente e pressionar enter, aparecerá uma das mensagens listadas abaixo:
+If the user enters the value 1 (which indicates that they want to access the establishment), then the message Enter the age: will be printed to the console. Then, after inserting the client's age and pressing enter, one of the messages listed below will appear:
 
-- `Pessoa cliente menor de idade, catraca liberada!`: se a idade da pessoa inserida for menor que 18 anos.
+- `Underage client, turnstile released!`: if the inserted age is less than 18 years old.
 
-- `Pessoa adulta, catraca liberada!`: se a idade da pessoa inserida for igual ou maior que 18 anos, e menor ou igual a 49 anos.
+- `Adult client, turnstile released!`: if the inserted age is equal or greater than 18 years old, and less or equal to 49 years old.
 
-- `Pessoa adulta a partir de 50, catraca liberada!`: se a idade da pessoa inserida for a partir de 50 anos.
+- `Adult client from 50 years old, turnstile released!`: if the inserted age is 50 years old or more.
 
-Depois que a mensagem for impressa, então deverá retornar ao estado inicial do menu. Supondo que a idade da primeira pessoa seja 18 anos, um exemplo do conteúdo do console depois de inserir a idade da primeira pessoa cliente será:
+After the message is printed, it should return to the initial state of the menu. Assuming that the age of the first person is 18 years old, an example of the console content after inserting the age of the first client will be:
 ```
-Entre com o número correspondente à opção desejada:
-1 - Acessar o estabelecimento
-2 - Finalizar sistema e mostar relatório
+Enter the number corresponding to the desired option:
+1 - Access the establishment
+2 - Finish the system and show report
 1
-Entre com a sua idade:
+Enter your age:
 18
-Pessoa adulta, catraca liberada!
-Entre com o número correspondente à opção desejada:
-1 - Acessar o estabelecimento
-2 - Finalizar sistema e mostrar relatório
-```
-Esse ciclo se repete até a opção 2 ser escolhida, o que indica que a pessoa usuária quer finalizar o expediente e imprimir o relatório.
-
-⚠️🔴**DICA: use uma variável do tipo `short` para armazenar a opção inserida pela pessoa usuária, já que é um valor númerico de pequena escala.** 🔴⚠️
-
-Depois de implementada a parte do menu, você deverá implementar a parte final, que é o relatório. Como dito anteriormente, o relatório é uma parte fundamental do sistema, pois provê informações para que a pessoa proprietária do estabelecimento possa traçar estratégias para aumentar sua clientela e, consequentemente, aumentar seu lucro, gerando mais empregos, impactando a vida de muitas pessoas. Consegue ver a importância de um sistema bem desenvolvido?
-
-O relatório deve ser impresso no console quando a opção 2 for selecionada. Supondo que 200 pessoas visitaram o estabelecimento, o relatório deve conter as seguintes informações:
-
-- Número total de pessoas que visitaram o estabelecimento: nesse caso, esse valor deverá ser 200.
-
-- Número de pessoas menores de 18 anos que visitaram o estabelecimento: supondo que, das 200 pessoas, 20 eram menores de 18 anos, então no relatório esse valor deverá ser 20.
-
-- Número de pessoas adultas (entre 18 e 49 anos) que visitaram o estabelecimento: supondo que, das 200 pessoas, 150 eram adultas entre 18 e 49 anos, então esse valor deverá ser 150.
-
-- Número de pessoas a partir de 50 anos que visitaram o estabelecimento: supondo que, das 200 pessoas, 30 tinham a partir de 50, então esse valor deverá ser 30.
-
-
-O relatório também deve calcular a porcentagem de pessoas em cada categoria em relação ao total de pessoas. Ainda seguindo a suposição anterior, o total de visitas ao estabelecimento foi de 200 pessoas, então o relatório na parte dos números percentuais deve apresentar:
-
-- Percentual de pessoas menores de 18 anos que visitaram o estabelecimento: supondo que, das 200 pessoas, 20 eram menores de 18 anos, então no relatório esse valor deverá ser 10.0%.
-
-- Número de pessoas adultas (entre 18 e 49 anos) que visitaram o estabelecimento: supondo que, das 200 pessoas, 150 eram adultas entre 18 e 49 anos, então esse valor deverá ser 75.0%.
-
-- Número de pessoas a partir de 50 anos que visitaram o estabelecimento: supondo que, das 200 pessoas, 30 tinham a partir de 50, então esse valor deverá ser 15.0%.
-
-Para essa suposição, a saída do relatório deve ser similar à saída abaixo:
-```
------ Quantidade -----
-menores: 20
-adultas: 150
-a partir de 50: 30
-
------ Percentual -----
-menores: 10.0%
-adultas: 75.0%
-a partir de 50: 15.0%
-
-TOTAL: 200
+Adult person, turnstile released!
+Enter the number corresponding to the desired option:
+1 - Access the establishment
+2 - Finish the system and show report
 ```
 
-## Restrições
+This cycle repeats until option 2 is chosen, indicating that the user wants to end business hours and print the report.
 
-- O valor percentual deve ter duas casas decimais, exceto se for zero, então pode ser apenas uma casa decimal, como exposto no exemplo acima.
-- Caso a opção inserida pela pessoa usuária seja um valor diferente de 1 ou de 2, a mensagem `Entre com uma opção válida!` deve ser impressa no console, e o menu voltar para o estado inicial.
+⚠️🔴**TIP: use a short type variable to store the option entered by the user, as it is a small-scale numerical value.** 🔴⚠️
 
-⚠️🔴**DICA: para fazer com que o valor do tipo `float` ou `double` tenha apenas duas casas decimais, pesquise sobre a classe `DecimalFormat`.** 🔴⚠️
+After implementing the menu part, you must implement the final part, which is the report. As mentioned earlier, the report is a fundamental part of the system because it provides information for the establishment owner to develop strategies to increase their clientele and, consequently, increase their profit, generating more jobs and impacting the lives of many people. Can you see the importance of a well-developed system?
 
-## Exemplo
+The report should be printed to the console when option 2 is selected. Assuming that 200 people visited the establishment, the report should contain the following information:
 
-Aqui temos um outro exemplo da saída do relatório, considerando que 173 pessoas visitaram o estabelecimento, das quais 34 eram menores de 18 anos, 108 eram adultas entre 18 e 49 anos de idade, e 31 tinham a partir de 50 anos:
+- Total number of people who visited the establishment: in this case, this value should be 200.
+
+- Number of people under 18 who visited the establishment: assuming that out of the 200 people, 20 were under 18 years old, then this value should be 20 in the report.
+
+- Number of adult people (between 18 and 49 years old) who visited the establishment: assuming that out of the 200 people, 150 were adults between 18 and 49 years old, then this value should be 150.
+
+- Number of people 50 years old or older who visited the establishment: assuming that out of the 200 people, 30 were 50 years old or older, then this value should be 30.
+
+
+The report should also calculate the percentage of people in each category relative to the total number of people. Still following the previous assumption, the total number of visits to the establishment was 6 people, so the report in the percentage section should show:
+
+- Percentage of people under 18 who visited the establishment: assuming that out of 6 people, 2 were under 18, then this value should be 33.3% in the report.
+
+- Number of adult people (between 18 and 49 years old) who visited the establishment: assuming that out of 6 people, 2 were adults between 18 and 49 years old, then this value should be 33.3% in the report.
+
+- Number of people aged 50 and over who visited the establishment: assuming that out of 6 people, 2 were aged 50 and over, then this value should be 33.3% in the report.
+
+For this assumption, the report output should be similar to the output below:
 ```
 ----- Quantidade -----
-menores: 34
-adultas: 108
-a partir de 50: 31
+menores: 2
+adults: 2
+a partir de 50: 2
 
 ----- Percentual -----
-menores: 19.65%
-adultas: 62.43%
-a partir de 50: 17.92%
+menores: 33.3%
+adults: 33.3%
+a partir de 50: 33.3%
 
-TOTAL: 173
+TOTAL: 6
 ```
 
-Ótimo trabalho! Lembre-se de surpreender positivamente o seu cliente!
+## Constraints
+
+- If the option entered by the user is a value other than 1 or 2, the message Enter a valid option! should be printed to the console, and the menu should return to its initial state.
+
+⚠️🔴**TIP: to format the value of a float or double to have only two decimal places, research about the DecimalFormat class.** 🔴⚠️
+
+Great job! Remember to positively surprise your customer!
